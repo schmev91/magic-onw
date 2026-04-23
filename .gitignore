@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+.env*
+
+# Tests
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Spec Kit
+.specify/feature.json
