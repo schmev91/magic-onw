@@ -4,6 +4,7 @@ import SelectInput from 'ink-select-input';
 import { getBookmarks, updateLastUsed } from '../../core/bookmarks.js';
 import { AliasEntry } from '../../core/types.js';
 import { SearchInput } from '../components/SearchInput.js';
+import { CustomItem } from '../components/CustomItem.js';
 import { useFilter } from '../hooks/useFilter.js';
 import { writeJumpSignal } from '../../core/output.js';
 
@@ -46,7 +47,11 @@ export function ListView({ sortByRecency = false }: Props) {
       
       <Box marginTop={1} flexDirection="column">
         {items.length > 0 ? (
-          <SelectInput items={items} onSelect={handleSelect} />
+          <SelectInput 
+            items={items} 
+            onSelect={handleSelect} 
+            itemComponent={CustomItem}
+          />
         ) : (
           <Text color="yellow">No bookmarks found matching "{query}"</Text>
         )}
