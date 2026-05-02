@@ -60,3 +60,9 @@ export function updateLastUsed(alias: string): void {
     config.set('entries', entries);
   }
 }
+
+export function deleteBookmark(alias: string): void {
+  const entries = getBookmarks();
+  const filtered = entries.filter(e => e.alias !== alias);
+  config.set('entries', filtered);
+}
