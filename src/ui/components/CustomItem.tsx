@@ -9,12 +9,11 @@ interface Props {
   value?: string;
 }
 
-// The ink-select-input's itemComponent receives the properties of the item object as props.
+// Renders one row: alias in a fixed-width column, path truncated to fit.
 export function CustomItem({ label, isSelected = false, value, ...rest }: Props) {
   const { stdout } = useStdout();
   const terminalWidth = stdout?.columns || 80;
   
-  // The value (path) is passed directly as a prop because ink-select-input spreads the item object
   const path = value || '';
   
   const aliasWidth = 25; // Fixed width for alias column
