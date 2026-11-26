@@ -83,6 +83,8 @@ Reload your shell (`source ~/.bashrc`) and you're done.
 
 The function uses `[[ ]]`, so it needs **bash or zsh**. It won't work in `dash`/`ash`.
 
+On Windows, see [INSTALL-WINDOWS.md](INSTALL-WINDOWS.md) for Git Bash setup.
+
 ## 🚀 Usage
 
 ### Bookmark a directory
